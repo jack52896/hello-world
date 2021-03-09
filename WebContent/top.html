@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"> 
+    <title>Bootstrap 实例 - 模态框（Modal）插件事件</title>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    	.col{
+    			padding:0px 10px 0px 10px;
+    			
+    	}
+    	.colmargin{
+    			margin :40px 30px 40px 30px
+    	}
+    	.spanLeftcol{
+    			padding:0px 0px 0px 92px;
+    	}
+    	.spanRightcol{
+    			padding:0px 92px 0px 0px;
+    	}
+    </style>
+</head>
+
+<!--修改模态框 出现的位置-->
+<style type="text/css">
+  
+</style>
+
+<body>
+
+<h2>模态框（Modal）插件事件</h2>
+<!-- 按钮触发模态框 -->
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    开始演示模态框
+</button>
+
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width:30%;height:70%;">
+        <div class="modal-content">
+          
+            <div class="modal-body">
+              		<div class = "colmargin">
+              			<div class = "col">
+              				<span><span ></span></span>
+							<input id = "name" type="text" name="name" class="form-control" placeholder="用户名">
+					</div>
+				</div>
+					
+              		<div class = "colmargin">
+              			<div class = "col">
+					<input id = "name" type="text" name="name" class="form-control" placeholder="用户名"></div></div>
+					<div class = "colmargin">
+              			<div class = "col">
+					<button type = "submit" class = "btn btn-sm btn-info" ><span class = "spanLeftcol"></span>登录
+						<span class = "spanRightcol"></span>
+					</button></div></div>
+            </div>
+          
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script>
+   $(function () { $('#myModal').modal('hide')});
+</script>
+<script>
+   $(function () { $('#myModal').on('hide.bs.modal', function () {
+      //alert('嘿，我听说您喜欢模态框...');})
+   });
+</script>
+
+</body>
+</html>
